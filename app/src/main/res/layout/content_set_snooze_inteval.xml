@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.abhi.snoozeyoulose.SetSnoozeIntervalActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:id="@+id/alarmText"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/snooze" />
+
+    <TextView
+        android:id="@+id/SnoozeIntervalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="58dp"
+        android:text="Enter The Snooze Interval in Minutes:"
+        tools:text="Enter The Snooze Interval in Minutes:" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/SnoozeIntervalText"
+        android:layout_below="@+id/SnoozeIntervalText"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/set"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText2"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_toStartOf="@+id/alarmText"
+        android:text="SET"
+        tools:text="SET" />
+
+    <TextView
+        android:id="@+id/confirmset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editText2"
+        android:layout_below="@+id/set"
+        android:layout_marginTop="23dp"
+        android:layout_toStartOf="@+id/alarmText" />
+
+</RelativeLayout>

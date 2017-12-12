@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.abhi.snoozeyoulose.MainAlarmActivity">
+
+    <TimePicker
+        android:id="@+id/alarmTimePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+
+    <Button
+        android:id="@+id/snooze"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/alarmTimePicker"
+        android:layout_centerHorizontal="true"
+        android:onClick="onToggleClicked"
+        android:text="Snooze" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text=""
+        android:id="@+id/alarmText"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/snooze" />
+
+    <Button
+        android:id="@+id/on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/alarmTimePicker"
+        android:layout_marginStart="18dp"
+        android:text="Set Alarm" />
+
+    <Button
+        android:id="@+id/off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/alarmTimePicker"
+        android:layout_marginEnd="20dp"
+        android:text="Alarm OFF" />
+
+    <Button
+        android:id="@+id/setSnooze"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/on"
+        android:text="Set Snooze Interval:"
+        tools:text="Set Snooze Interval:" />
+
+    <TextView
+        android:id="@+id/snoozeCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/off"
+        android:layout_alignTop="@+id/setSnooze"
+        android:layout_toEndOf="@+id/setSnooze"
+        android:text="Snooze Count:" />
+
+    <TextView
+        android:id="@+id/totalPaid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/off"
+        android:layout_below="@+id/snoozeCount"
+        android:layout_toEndOf="@+id/setSnooze"
+        android:text="Total Paid:" />
+
+</RelativeLayout>
